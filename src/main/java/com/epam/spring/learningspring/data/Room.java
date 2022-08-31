@@ -13,7 +13,7 @@ public class Room {
     @GeneratedValue(strategy = GenerationType.AUTO)
 
     @Column(name = "ROOM_ID")
-    private long roomId;
+    private long id;
 
     @Column(name = "NAME")
     private String name;
@@ -27,7 +27,7 @@ public class Room {
     @Override
     public String toString() {
         return "Room{" +
-                "id=" + roomId +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 ", roomNumber='" + roomNumber + '\'' +
                 ", bedInfo='" + bedInfo + '\'' +
