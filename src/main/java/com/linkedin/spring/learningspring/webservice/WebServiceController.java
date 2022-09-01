@@ -1,10 +1,10 @@
-package com.epam.spring.learningspring.webservice;
+package com.linkedin.spring.learningspring.webservice;
 
-import com.epam.spring.learningspring.business.ReservationService;
-import com.epam.spring.learningspring.business.RoomReservation;
-import com.epam.spring.learningspring.data.Guest;
-import com.epam.spring.learningspring.data.Room;
-import com.epam.spring.learningspring.util.DateUtils;
+import com.linkedin.spring.learningspring.business.ReservationService;
+import com.linkedin.spring.learningspring.business.RoomReservation;
+import com.linkedin.spring.learningspring.data.Guest;
+import com.linkedin.spring.learningspring.data.Room;
+import com.linkedin.spring.learningspring.util.DateUtils;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

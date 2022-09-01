@@ -1,4 +1,4 @@
-package com.epam.spring.learningspring.data;
+package com.linkedin.spring.learningspring.data;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

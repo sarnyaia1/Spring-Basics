@@ -1,6 +1,6 @@
-package com.epam.spring.learningspring.business;
+package com.linkedin.spring.learningspring.business;
 
-import com.epam.spring.learningspring.data.*;
+import com.linkedin.spring.learningspring.data.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.stereotype.Service;
@@ -42,14 +42,11 @@ public class ReservationService {
         for (Long id : roomReservationMap.keySet()) {
             roomReservations.add(roomReservationMap.get(id));
         }
-        roomReservations.sort(new Comparator<RoomReservation>() {
-            @Override
-            public int compare(RoomReservation o1, RoomReservation o2) {
-                if (o1.getRoomName().equals(o2.getRoomName())) {
-                    return o1.getRoomNumber().compareTo(o2.getRoomNumber());
-                }
-                return o1.getRoomName().compareTo(o2.getRoomName());
+        roomReservations.sort((o1, o2) -> {
+            if (o1.getRoomName().equals(o2.getRoomName())) {
+                return o1.getRoomNumber().compareTo(o2.getRoomNumber());
             }
+            return o1.getRoomName().compareTo(o2.getRoomName());
         });
         return roomReservations;
     }
@@ -58,14 +55,11 @@ public class ReservationService {
         Iterable<Guest> guests = this.guestRepository.findAll();
         List<Guest> guestList = new ArrayList<>();
         guests.forEach(guestList::add);
-        guestList.sort(new Comparator<Guest>() {
-            @Override
-            public int compare(Guest o1, Guest o2) {
-                if(o1.getLastName().equals(o2.getLastName())){
-                    return o1.getFirstName().compareTo(o2.getFirstName());
-                }
-                return o1.getLastName().compareTo(o2.getLastName());
+        guestList.sort((o1, o2) -> {
+            if(o1.getLastName().equals(o2.getLastName())){
+                return o1.getFirstName().compareTo(o2.getFirstName());
             }
+            return o1.getLastName().compareTo(o2.getLastName());
         });
         return guestList;
     }
@@ -81,12 +75,7 @@ public class ReservationService {
         Iterable<Room> rooms = this.roomRepository.findAll();
         List<Room> roomList = new ArrayList<>();
         rooms.forEach(roomList::add);
-        roomList.sort(new Comparator<Room>() {
-            @Override
-            public int compare(Room o1, Room o2) {
-                return o1.getRoomNumber().compareTo(o2.getRoomNumber());
-            }
-        });
+        roomList.sort(Comparator.comparing(Room::getRoomNumber));
         return roomList;
     }
 }

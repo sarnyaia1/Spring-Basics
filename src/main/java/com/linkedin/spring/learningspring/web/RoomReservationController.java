@@ -1,11 +1,11 @@
-package com.epam.spring.learningspring.web;
+package com.linkedin.spring.learningspring.web;
 
 import java.util.Date;
 import java.util.List;
 
-import com.epam.spring.learningspring.business.ReservationService;
-import com.epam.spring.learningspring.business.RoomReservation;
-import com.epam.spring.learningspring.util.DateUtils;
+import com.linkedin.spring.learningspring.business.ReservationService;
+import com.linkedin.spring.learningspring.business.RoomReservation;
+import com.linkedin.spring.learningspring.util.DateUtils;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

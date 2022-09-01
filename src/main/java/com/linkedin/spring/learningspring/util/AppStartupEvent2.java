@@ -1,7 +1,7 @@
-package com.epam.spring.learningspring.util;
+package com.linkedin.spring.learningspring.util;
 
-import com.epam.spring.learningspring.business.ReservationService;
-import com.epam.spring.learningspring.business.RoomReservation;
+import com.linkedin.spring.learningspring.business.ReservationService;
+import com.linkedin.spring.learningspring.business.RoomReservation;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;

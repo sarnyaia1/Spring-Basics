@@ -1,4 +1,4 @@
-package com.epam.spring.learningspring.util;
+package com.linkedin.spring.learningspring.util;
 
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -14,7 +14,7 @@ public class DateUtils {
 
     public Date createDateFromDateString(String dateString){
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        Date date = null;
+        Date date;
         if(StringUtils.hasText(dateString)){
             try{
                 date = format.parse(dateString);

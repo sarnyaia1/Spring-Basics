@@ -1,4 +1,4 @@
-package com.epam.spring.learningspring;
+package com.linkedin.spring.learningspring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

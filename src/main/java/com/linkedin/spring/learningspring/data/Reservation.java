@@ -1,4 +1,4 @@
-package com.epam.spring.learningspring.data;
+package com.linkedin.spring.learningspring.data;
 
 import lombok.Data;
 

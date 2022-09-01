@@ -1,6 +1,6 @@
-package com.epam.spring.learningspring.util;
+package com.linkedin.spring.learningspring.util;
 
-import com.epam.spring.learningspring.data.*;
+import com.linkedin.spring.learningspring.data.*;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
@@ -23,8 +23,5 @@ public class AppStartupEvent implements ApplicationListener<ApplicationReadyEven
         guests.forEach(System.out::println);
         Iterable<Reservation> reservations = this.reservationRepository.findAll();
         reservations.forEach(System.out::println);
-        System.out.println("");
-        System.out.println("=========================================================================================================");
-        System.out.println("");
     }
 }

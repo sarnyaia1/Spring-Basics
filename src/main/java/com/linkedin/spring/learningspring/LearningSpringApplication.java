@@ -1,8 +1,12 @@
-package com.epam.spring.learningspring;
+package com.linkedin.spring.learningspring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
+/**
+ * author akos_sarnyai
+ */
 @SpringBootApplication
 public class LearningSpringApplication {
 
