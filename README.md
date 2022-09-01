@@ -5,3 +5,6 @@
 3. Service Tier
 4. Web pages with Spring Controller
 5. Spring Webservices
+
+![alt picture](screenshot.png)
+
