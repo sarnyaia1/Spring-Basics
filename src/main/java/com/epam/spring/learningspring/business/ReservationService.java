@@ -69,4 +69,24 @@ public class ReservationService {
         });
         return guestList;
     }
+
+    public void addGuest(Guest guest){
+        if(guest == null){
+            throw new RuntimeException();
+        }
+        this.guestRepository.save(guest);
+    }
+
+    public List<Room> getHotelRooms(){
+        Iterable<Room> rooms = this.roomRepository.findAll();
+        List<Room> roomList = new ArrayList<>();
+        rooms.forEach(roomList::add);
+        roomList.sort(new Comparator<Room>() {
+            @Override
+            public int compare(Room o1, Room o2) {
+                return o1.getRoomNumber().compareTo(o2.getRoomNumber());
+            }
+        });
+        return roomList;
+    }
 }
