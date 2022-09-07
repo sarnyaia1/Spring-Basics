@@ -1,4 +1,4 @@
-package com.linkedin.spring.learningspring.util;
+package com.linkedin.spring.learningspring.dateUtil;
 
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;

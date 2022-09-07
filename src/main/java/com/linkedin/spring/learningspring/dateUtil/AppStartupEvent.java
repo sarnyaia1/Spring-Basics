@@ -1,4 +1,4 @@
-package com.linkedin.spring.learningspring.util;
+package com.linkedin.spring.learningspring.dateUtil;
 
 import com.linkedin.spring.learningspring.data.*;
 import lombok.AllArgsConstructor;

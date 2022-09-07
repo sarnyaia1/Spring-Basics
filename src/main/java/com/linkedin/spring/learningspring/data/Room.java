@@ -1,5 +1,6 @@
 package com.linkedin.spring.learningspring.data;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.*;

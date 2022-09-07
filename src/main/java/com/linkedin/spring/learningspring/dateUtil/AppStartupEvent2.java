@@ -1,7 +1,7 @@
-package com.linkedin.spring.learningspring.util;
+package com.linkedin.spring.learningspring.dateUtil;
 
-import com.linkedin.spring.learningspring.business.ReservationService;
-import com.linkedin.spring.learningspring.business.RoomReservation;
+import com.linkedin.spring.learningspring.service.ReservationService;
+import com.linkedin.spring.learningspring.data.RoomReservation;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;

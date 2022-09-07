@@ -1,6 +1,6 @@
-package com.linkedin.spring.learningspring.web;
+package com.linkedin.spring.learningspring.controllers;
 
-import com.linkedin.spring.learningspring.business.ReservationService;
+import com.linkedin.spring.learningspring.service.ReservationService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/guests")
+@RequestMapping("/rooms")
 @AllArgsConstructor
-public class GuestController {
+public class RoomController {
 
     private final ReservationService reservationService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String getGuests(Model model){
-        model.addAttribute("guests", this.reservationService.getHotelGuests());
-        return "hotel-guests";
+    public String getRooms(Model model){
+        model.addAttribute("rooms", reservationService.getHotelRooms());
+        return "hotel-rooms";
     }
 }

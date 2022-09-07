@@ -1,10 +1,10 @@
-package com.linkedin.spring.learningspring.webservice;
+package com.linkedin.spring.learningspring.controllers.rest;
 
-import com.linkedin.spring.learningspring.business.ReservationService;
-import com.linkedin.spring.learningspring.business.RoomReservation;
+import com.linkedin.spring.learningspring.service.ReservationService;
+import com.linkedin.spring.learningspring.data.RoomReservation;
 import com.linkedin.spring.learningspring.data.Guest;
 import com.linkedin.spring.learningspring.data.Room;
-import com.linkedin.spring.learningspring.util.DateUtils;
+import com.linkedin.spring.learningspring.dateUtil.DateUtils;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -28,18 +28,18 @@ public class WebServiceController {
 
     @GetMapping(path = "/guests")
     public List<Guest> getGuests(){
-        return this.reservationService.getHotelGuests();
+        return reservationService.getHotelGuests();
     }
 
     @PostMapping(path = "/guests")
     @ResponseStatus(HttpStatus.CREATED)
     public void addGuest(@RequestBody Guest guest){
-        this.reservationService.addGuest(guest);
+        reservationService.addGuest(guest);
     }
 
     @GetMapping(path = "/rooms")
     public List<Room> getRooms(){
-        return this.reservationService.getHotelRooms();
+        return reservationService.getHotelRooms();
     }
 
 }

@@ -1,4 +1,4 @@
-package com.linkedin.spring.learningspring.business;
+package com.linkedin.spring.learningspring.data;
 
 import lombok.Data;
 
