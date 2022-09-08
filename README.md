@@ -5,6 +5,8 @@
 3. Service Tier
 4. Web pages with Spring Controller
 5. Spring Webservices
+6. Spring Command Line Runner
+7. Spring Data and Data repository
 
 ![alt picture](screenshot.png)
 
