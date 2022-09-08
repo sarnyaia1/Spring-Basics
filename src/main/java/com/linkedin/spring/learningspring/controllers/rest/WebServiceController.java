@@ -1,5 +1,6 @@
 package com.linkedin.spring.learningspring.controllers.rest;
 
+import com.linkedin.spring.learningspring.data.Employee;
 import com.linkedin.spring.learningspring.service.ReservationService;
 import com.linkedin.spring.learningspring.data.RoomReservation;
 import com.linkedin.spring.learningspring.data.Guest;
@@ -40,6 +41,11 @@ public class WebServiceController {
     @GetMapping(path = "/rooms")
     public List<Room> getRooms(){
         return reservationService.getHotelRooms();
+    }
+
+    @GetMapping(path = "/employees")
+    public List<Employee> getEmployees(){
+        return reservationService.getHotelEmployees();
     }
 
 }

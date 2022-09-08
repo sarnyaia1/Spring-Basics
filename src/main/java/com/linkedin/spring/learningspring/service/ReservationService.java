@@ -16,6 +16,8 @@ public class ReservationService {
 
     private final GuestRepository guestRepository;
 
+    private final EmployeeRepository employeeRepository;
+
     private final ReservationRepository reservationRepository;
 
 
@@ -52,7 +54,7 @@ public class ReservationService {
     }
 
     public List<Guest> getHotelGuests(){
-        Iterable<Guest> guests = this.guestRepository.findAll();
+        Iterable<Guest> guests = guestRepository.findAll();
         List<Guest> guestList = new ArrayList<>();
         guests.forEach(guestList::add);
         guestList.sort((o1, o2) -> {
@@ -72,10 +74,19 @@ public class ReservationService {
     }
 
     public List<Room> getHotelRooms(){
-        Iterable<Room> rooms = this.roomRepository.findAll();
+        Iterable<Room> rooms = roomRepository.findAll();
         List<Room> roomList = new ArrayList<>();
         rooms.forEach(roomList::add);
         roomList.sort(Comparator.comparing(Room::getRoomNumber));
         return roomList;
     }
+
+    public List<Employee> getHotelEmployees(){
+        Iterable<Employee> employees = employeeRepository.findAll();
+        List<Employee> employeeList = new ArrayList<>();
+        employees.forEach(employeeList::add);
+        employeeList.sort(Comparator.comparing(Employee::getPosition));
+        return employeeList;
+    }
+
 }
