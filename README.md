@@ -7,6 +7,7 @@
 5. Spring Webservices
 6. Spring Command Line Runner
 7. Spring Data and Data repository
+8. Spring Security
 
 ![alt picture](screenshot.png)
 
