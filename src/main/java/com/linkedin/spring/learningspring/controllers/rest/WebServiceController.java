@@ -23,8 +23,8 @@ public class WebServiceController {
 
     @RequestMapping(path = "/reservations", method = RequestMethod.GET)
     public List<RoomReservation> getReservations(@RequestParam(value = "date", required = false) String dateString){
-        Date date = this.dateUtils.createDateFromDateString(dateString);
-        return this.reservationService.getRoomReservationsForDate(date);
+        Date date = dateUtils.createDateFromDateString(dateString);
+        return reservationService.getRoomReservationsForDate(date);
     }
 
     @GetMapping(path = "/guests")
