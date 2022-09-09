@@ -28,4 +28,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.inMemoryAuthentication().passwordEncoder(NoOpPasswordEncoder.getInstance())
                 .withUser("user").password("password").roles("USER");
     }
+
+    //Add admin role and page
 }
